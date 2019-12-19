@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is the console for AirBnB"""
+"""Console for AirBnB Project"""
 import cmd
 from models import storage
 from datetime import datetime
@@ -42,7 +42,24 @@ class HBNBCommand(cmd.Cmd):
             if not line:
                 raise SyntaxError()
             my_list = line.split(" ")
+            params = {}
+            if len(my_list) > 1:
+                for i in range(1, len(my_list)):
+                    if len(my_list[i].split("=")) == 2:
+                        key = my_list[i].split("=")[0]
+                        value = my_list[i].split("=")[1].replace("_", " ")
+                        if value.isnumeric():
+                            value = int(value)
+                        else:
+                            try:
+                                float(value)
+                            except Exception:
+                                pass
+                        params[key] = value
             obj = eval("{}()".format(my_list[0]))
+            for key, val in params.items():
+                cmd.Cmd.onecmd(self, "update {} {} {} \
+                                '{}'".format(my_list[0], obj.id, key, val))
             obj.save()
             print("{}".format(obj.id))
         except SyntaxError:
