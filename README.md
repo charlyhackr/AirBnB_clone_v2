@@ -23,6 +23,7 @@ To start, navigate to the project folder and enter this command, `./console.py` 
 
 #### Create
 `create <class name>`
+
 Ex:
 `create BaseModel`
 
