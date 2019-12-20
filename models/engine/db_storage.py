@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" engine for program. """
+"""  engine for program airbnb. """
 from sqlalchemy import create_engine
 from os import getenv
 from models.base_model import Base
@@ -12,7 +12,7 @@ from models.review import Review
 from sqlalchemy.orm import sessionmaker, scoped_session
 
 
-class DBStorage:
+aclass DBStorage:
     """ Class for the new engine. """
     __engine = None
     __session = None
