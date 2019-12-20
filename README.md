@@ -60,7 +60,6 @@ Ex:
 `City.show(my_city_id)`
 
 
-
 Made by: Carlos Alvarez and Daniel Baquero
 
 Software School: Holberton
