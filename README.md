@@ -29,6 +29,7 @@ Ex:
 
 #### Show
 `show <class name> <object id>`
+
 Ex:
 `show User my_id`
 
