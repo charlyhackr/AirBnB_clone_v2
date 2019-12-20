@@ -61,4 +61,5 @@ Ex:
 
 Made by: Carlos Alvarez and Daniel Baquero
 Software School: Holberton
-Email's: 835@holbertonschool.com (Daniel Baquero)
+Email #1: carlos.alvarez@holberonschool.com (Carlos Alvarez)
+Email #2: 835@holbertonschool.com (Daniel Baquero)
