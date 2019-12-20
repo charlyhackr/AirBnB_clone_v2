@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is the file storage class for AirBnB project"""
+"""This is the file storage class for AirBnB"""
 import json
 from models.base_model import BaseModel
 from models.user import User
@@ -21,9 +21,9 @@ class FileStorage:
     __objects = {}
 
     def all(self, cls=None):
-        """return a dictionary
+        """returns a dictionary
         Return:
-            return a dictionary of __object
+            returns a dictionary of __object
         """
         if cls is not None:
             n_dict = {}

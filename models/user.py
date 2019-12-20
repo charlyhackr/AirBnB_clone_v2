@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is the user class"""
+"""This is the user class for project"""
 
 import models
 from models.base_model import BaseModel, Base
