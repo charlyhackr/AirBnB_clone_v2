@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-""" New engine for the program with alchemy and env variables mysql. """
+""" engine for program. """
 from sqlalchemy import create_engine
 from os import getenv
 from models.base_model import Base
 from models.city import City
 from models.state import State
+from models.user import User
+from models.place import Place
+from models.amenity import Amenity
+from models.review import Review
 from sqlalchemy.orm import sessionmaker, scoped_session
 
 
@@ -31,6 +35,10 @@ class DBStorage:
         else:
             res = self.__session.query(City).all()
             res += self.__session.query(State).all()
+            res += self.__session.query(User).all()
+            res += self.__session.query(Place).all()
+            res += self.__session.query(Amenity).all()
+            res += self.__session.query(Review).all()
         output = {}
         for elem in res:
             key = '{}.{}'.format(type(elem).__name__, elem.id)
@@ -53,7 +61,6 @@ class DBStorage:
     def reload(self):
         """ Creates all tables in the database and the session. """
         Base.metadata.create_all(self.__engine)
-        self.__session = sessionmaker(bind=self.__engine,
-                                      expire_on_commit=False)
-        Session = scoped_session(self.__session)
+        sess = sessionmaker(bind=self.__engine, expire_on_commit=False)
+        Session = scoped_session(sess)
         self.__session = Session()
