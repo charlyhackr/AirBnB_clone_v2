@@ -4,8 +4,8 @@ This is the console/command interpreter for the Holberton Airbnb clone project. 
 
 ### Supported classes:
 * BaseModel
-* User
 * State
+* User
 * City
 * Amenity
 * Place
