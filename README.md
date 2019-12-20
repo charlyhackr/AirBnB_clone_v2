@@ -35,6 +35,7 @@ Ex:
 
 #### Destroy
 `destroy <class name> <object id>`
+
 Ex:
 `destroy Place my_place_id`
 
