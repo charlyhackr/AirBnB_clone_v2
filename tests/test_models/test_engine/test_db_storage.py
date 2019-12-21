@@ -19,13 +19,13 @@ class Test_dbstorage(unittest.TestCase):
     """Test to check"""
 
     def test_pep8_db_storage(self):
-        """Test PEP8."""
+        """Test PEP8. ha"""
         pep8s = pep8.StyleGuide(quiet=True)
         result = pep8s.check_files(['models/engine/db_storage.py'])
         self.assertEqual(result.total_errors, 0, "Code style errors found.")
 
     def test_db_storage_module_docstring(self):
-        """Test for the file_storage.py module docstring"""
+        """Test for the file_storage.py module docstring exactly"""
         self.assertIsNotNone(file_storage.__doc__, "fix a docstring")
 
 if __name__ == "__main__":
