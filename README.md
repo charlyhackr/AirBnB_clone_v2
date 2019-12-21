@@ -5,7 +5,7 @@ This is the console/command interpreter for the Holberton Airbnb clone project. 
 ### Supported classes:
 * BaseModel
 * State
-* User.
+* User
 * City
 * Amenity
 * Place
