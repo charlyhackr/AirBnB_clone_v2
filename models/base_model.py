@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is the base model class for AirBnB project """
+"""This is the base model class for AirBnB"""
 import uuid
 import models
 from datetime import datetime
@@ -29,6 +29,12 @@ class BaseModel:
             updated_at: updated date
         """
         if kwargs:
+            if "id" not in kwargs.keys():
+                self.id = str(uuid.uuid4())
+            if "created_at" not in kwargs.keys():
+                self.created_at = datetime.now()
+            if "updated_at" not in kwargs.keys():
+                self.updated_at = datetime.now()
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
                     value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
