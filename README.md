@@ -3,7 +3,7 @@
 This is the console/command interpreter for the Holberton Airbnb clone project. The console can be used to store objects in and retrieve objects from a JSON file. We manage the database with the MySQLdb module, we make actions towards it to find and filter specific data we desire. In this project we make a transition between the FileStorage database and the DBstorage.
 
 ### Supported classes:
-* BaseModel.
+* BaseModel
 * State
 * User
 * City
