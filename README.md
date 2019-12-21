@@ -6,7 +6,7 @@ This is the console/command interpreter for the Holberton Airbnb clone project. 
 * BaseModel
 * State
 * User
-* City.
+* City
 * Amenity
 * Place
 * Review
